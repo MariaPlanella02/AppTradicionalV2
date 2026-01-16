@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="stylesheet" href="./assets/styles/main.scss">
+    <title>Sabores del Ayer</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+
+  <body class="bg-ink text-paper">
+    <include src="./views/header.html"></include>
+
+    <main class="hero min-h-screen px-8 py-16 text-ink">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 hero__grid">
+        <div class="flex flex-col justify-center items-start hero__content">
+          
+          <h1 class="hero-title font-extrabold leading-tight">
+            Sabores de Ayer
+          </h1>
+
+          <p class="hero-description max-w-[75ch] leading-relaxed">
+            Sabores de Ayer es un espacio dedicado a la cocina de siempre. Aquí encontrarás recetas auténticas, consejos prácticos y una galería inspiradora que celebra los sabores y técnicas que han pasado de generación en generación. Nuestro objetivo es acercarte a la tradición culinaria con un diseño moderno y fácil de usar, donde cada sección —desde artículos hasta imágenes— está pensada para que disfrutes aprendiendo y descubriendo más sobre la cocina tradicional.
+          </p>
+
+          <a href="article.html" class="hero-cta inline-flex items-center gap-3">
+            <i class="fa-solid fa-arrow-right"></i>
+            Descubre una receta especial.
+          </a>
+
+        </div>
+      </div>
+    </main>
+
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

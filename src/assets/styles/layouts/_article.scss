@@ -1,0 +1,83 @@
+
+.article {
+  @apply px-8 py-12 text-ink leading-relaxed;
+  container-type: inline-size;
+  container-name: article;
+}
+
+.article-title {
+  @apply text-[clamp(32px,5vw,48px)] font-bold text-brand text-center mb-8 p-[2cqmin];
+}
+
+.article-subtitle {
+  @apply text-[clamp(24px,4vw,32px)] font-semibold text-accent mb-6;
+}
+
+.article-heading {
+  @apply text-[clamp(24px,4vw,32px)] font-semibold text-brand my-6;
+}
+
+.article-step {
+  @apply text-[clamp(18px,3vw,22px)] font-normal text-ink border-b border-border my-4;
+}
+
+.article-paragraph {
+  @apply mb-6 text-[clamp(16px,3vw,20px)] leading-relaxed max-w-[70ch];
+}
+
+.article-list {
+  @apply my-8 pl-6 list-disc;
+}
+
+.article-list-item {
+  @apply text-[clamp(16px,3vw,20px)] text-ink font-medium;
+}
+
+.article-image {
+  @apply my-8 text-center;
+}
+
+.article-photo {
+  @apply max-w-[70%] mx-auto rounded-lg shadow-md;
+}
+
+.article-caption {
+  @apply text-[14px] text-ink mt-2 italic;
+}
+
+.article-quote {
+  @apply text-[clamp(18px,3vw,22px)] italic border-l-4 pl-4 my-8 text-accent;
+  border-color: var(--brand);
+}
+
+.article:has(.article-quote) {
+  background-color: var(--paper);
+}
+
+@container article (max-width: 600px) {
+  .article-title {
+    font-size: 1.953rem; 
+  }
+
+  .article-heading {
+    font-size: 1.563rem; 
+  }
+
+  .article-step {
+    font-size: 1.25rem; 
+  }
+
+  .article-paragraph {
+    font-size: clamp(14px, 3vw, 18px);
+  }
+
+  .article-quote {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+
+  .article-photo {
+    max-width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+}

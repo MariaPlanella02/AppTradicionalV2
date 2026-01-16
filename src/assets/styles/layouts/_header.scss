@@ -1,0 +1,59 @@
+
+.header-logo {
+  @apply w-32 h-auto;
+}
+
+.header-nav {
+  @apply hidden md:flex justify-end gap-6;
+}
+
+.header-link {
+  @apply font-semibold text-ink relative transition-colors text-[clamp(20px,3vw,28px)];
+}
+
+.header-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--cta-vibrant);
+  transition: width 0.3s ease;
+}
+
+.header-link:hover {
+  color: var(--cta-vibrant);
+}
+
+.header-link:hover::after {
+  width: 100%;
+}
+
+.header-toggle {
+  @apply hidden md:hidden bg-transparent border-none cursor-pointer text-ink text-3xl;
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 32px;
+    background: var(--paper);
+    padding: 16px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+    width: 200px;
+    text-align: left;
+  }
+
+  .header-nav.is-active {
+    display: flex;
+  }
+
+  .header-toggle {
+    display: block;
+  }
+}

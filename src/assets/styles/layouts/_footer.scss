@@ -1,0 +1,79 @@
+
+.footer {
+  @apply bg-transparent text-ink px-8 py-12;
+}
+
+.footer-info {
+  @apply grid grid-cols-1 md:grid-cols-6 gap-4 mb-8 text-center md:text-left;
+}
+
+.footer-info-text {
+  @apply text-[14px] leading-tight text-ink my-1;
+}
+
+.footer-divider {
+  @apply border-none border-t-2 border-border my-8;
+}
+
+
+.footer-bottom {
+  @apply flex justify-between items-center flex-wrap gap-6;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    @apply flex-col text-center gap-4;
+  }
+
+  .footer-nav {
+    @apply flex-col gap-2;
+  }
+
+  .footer-social {
+    @apply justify-center;
+  }
+}
+
+.footer-logo {
+  @apply w-32 h-auto;
+}
+
+
+.footer-nav {
+  @apply flex gap-6;
+}
+
+.footer-link {
+  @apply font-semibold text-ink relative transition-colors text-[clamp(20px,3vw,28px)];
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--brand);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--brand);
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.footer-social {
+  @apply flex gap-4;
+}
+
+.footer-social-link {
+  @apply text-ink text-[28px] transition-colors;
+}
+
+.footer-social-link:hover {
+  color: var(--highlight);
+}

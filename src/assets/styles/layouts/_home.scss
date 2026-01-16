@@ -1,59 +1,47 @@
-@use "../variables";
 
-* {
-  box-sizing: border-box;
+@keyframes hero-background {
+  0%   { background: url("../images/imagebg1.jpg") center/cover no-repeat; }
+  33%  { background: url("../images/imagebg2.jpg") center/cover no-repeat; }
+  66%  { background: url("../images/imagebg3.jpg") center/cover no-repeat; }
+  100% { background: url("../images/imagebg4.jpg") center/cover no-repeat; }
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: variables.$font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: variables.$uoc-bg;
-  color: variables.$uoc-corporate;
+.hero {
+  animation: hero-background 20s infinite alternate;
+  container-type: inline-size;
+  container-name: hero;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.hero-title {
+  @apply text-[clamp(48px,8vw,80px)] text-paper mb-6 p-[2cqmin] font-extrabold leading-tight drop-shadow-lg;
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+.hero-description {
+  @apply text-[clamp(22px,3vw,28px)] text-paper mb-10 drop-shadow-lg leading-relaxed max-w-[75ch];
+}
 
-  @media (min-width: variables.$mqMinWidth) {
-    max-width: none;
+.hero-cta {
+  @apply text-[clamp(22px,3vw,28px)] font-semibold rounded-md bg-accent text-paper px-6 py-3 inline-flex items-center gap-3 transition-colors;
+}
+
+.hero-cta:hover {
+  @apply bg-highlight;
+}
+
+@container hero (max-width: 600px) {
+  .hero-title {
+    font-size: 1.25rem;
   }
-}
 
-.uoc-title {
-  font-family: variables.$font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: variables.$uoc-corporate;
-
-  @media (min-width: variables.$mqMinWidth) {
-    font-size: 36px;
+  .hero-description {
+    font-size: 0.9375rem;
+    line-height: 1.6;
   }
-}
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+  .hero-cta {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    width: 100%;
+    justify-content: center;
+  }
 }

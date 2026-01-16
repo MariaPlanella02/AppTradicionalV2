@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./assets/styles/main.scss">
+    <title>AppCocinaTradicional</title>
+  </head>
+
+  <body class="bg-paper text-ink">
+    <include src="./views/header.html"></include>
+
+    <main class="article px-8 py-12">
+
+      <h2 class="article-subtitle text-center text-accent">Receta tradicional española</h2>
+
+      <h1 class="article-title">Paella de carne</h1>
+
+      <figure class="article-image text-center my-8">
+        <img src="assets/images/paella.jpg" alt="Participantes cocinando" class="article-photo mx-auto" />
+        <figcaption class="article-caption">Paella de carne.</figcaption>
+      </figure>
+
+      <include src="./views/quote.html" locals='{
+        "text": "La paella no se cocina, se celebra."
+      }'></include>
+
+      <h2 class="article-heading">Ingredientes</h2>
+
+      <ul class="article-list list-disc pl-6 my-6">
+
+        <include src="./views/ingredient.html" locals='{"text": "1 kg de arroz"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "2 kg de carne de pollos"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "1 kg de conejo"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "500 g de judías verdes"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "250 g de garrofó"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "300 g de tomate"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "3 dl de aceite de oliva"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "Unas hebras de azafrán"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "6 g de pimentón dulce"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "Sal al gusto"}'></include>
+        <include src="./views/ingredient.html" locals='{"text": "3,5 litros de agua"}'></include>
+
+      </ul>
+
+      <h2 class="article-heading">Pasos de preparación</h2>
+
+      <include src="./views/step.html" locals='{
+        "title": "Sofrito de carnes",
+        "text": "Calienta el aceite en la paellera. Añade el pollo y el conejo troceados y sofríelos hasta que estén dorados."
+      }'></include>
+
+      <include src="./views/step.html" locals='{
+        "title": "Verduras y tomate",
+        "text": "Incorpora las judías verdes y rehógalas junto a la carne. Añade el tomate triturado y el pimiento, sofríe a fuego lento unos 7-8 minutos."
+      }'></include>
+
+      <include src="./views/step.html" locals='{
+        "title": "Agua y cocción inicial",
+        "text": "Vierte el agua, añade el garrofó y los caracoles si los usas. Deja hervir unos 30 minutos para que el caldo se impregne de sabor."
+      }'></include>
+
+      <include src="./views/step.html" locals='{
+        "title": "Arroz y condimentos",
+        "text": "Añade el arroz en forma de cruz para distribuirlo bien. Agrega el azafrán, el pimentón y ajusta la sal. Cocina a fuego fuerte los primeros 10 minutos y luego baja a fuego medio otros 10 minutos."
+      }'></include>
+
+      <include src="./views/step.html" locals='{
+        "title": "El socarrat",
+        "text": "Deja reposar unos minutos para que se forme el característico socarrat."
+      }'></include>
+
+      <include src="./views/step.html" locals='{
+        "title": "Reposo y servicio",
+        "text": "Retira del fuego, tapa con un paño limpio y deja reposar 5 minutos antes de servir."
+      }'></include>
+
+      <h2 class="article-heading">Consejos</h2>
+
+      <p class="article-paragraph">
+        Usa paellera amplia y baja para que el arroz quede uniforme.
+        El agua debe cubrir bien los ingredientes al inicio, pero reducirse al añadir el arroz.
+        El socarrat es muy apreciado: no remuevas el arroz una vez añadido.
+        Si no encuentras garrofó, puedes sustituirlo por otra alubia blanca grande.
+      </p>
+
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>
