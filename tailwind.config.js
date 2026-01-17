@@ -12,7 +12,7 @@ module.exports = {
           lg: "0 2px 6px rgba(0,0,0,1)", 
         },
         fontFamily: { 
-          sans: ["TuTipografia", "sans-serif"], 
+          sans: ["Roboto", "sans-serif"],
         } 
       }, 
     },
